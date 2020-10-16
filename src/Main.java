@@ -1,19 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        {
-            Deposit service;
-            service = new Deposit();
-            double total = service.calculate(5, 3000);
-            System.out.println(total);
-        }
+        BankService  service = new BankService();
+        double deposit = service.calculate(5,30000);
+        System.out.println(deposit);
+        double cashback = service.earn(3, 10000);
+        System.out.println(cashback);
 
-
-        {
-            Cashback service;
-            service = new Cashback();
-            double cashback = service.calculate(5, 30000);
-            System.out.println(cashback);
-
-        }
     }
 }
